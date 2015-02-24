@@ -17,6 +17,8 @@ var app = new EmberApp();
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
 
+// ========= Ember Uploader
+app.import('bower_components/ember-uploader/dist/ember-uploader.named-amd.js');
 
 // ========= Font Awesome
 app.import('bower_components/font-awesome/css/font-awesome.css');

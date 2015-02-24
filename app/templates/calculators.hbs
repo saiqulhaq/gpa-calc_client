@@ -1,0 +1,66 @@
+<div class="ui blue inverted large menu borderless">
+    <a class="item">
+        <i class="fa fa-calculator icon"></i> Kalkulator IPK
+    </a>
+    <a class="item">
+        <i class="home icon"></i> Home
+    </a>
+    <div class="right menu">
+    </div>
+</div>
+<div class="ui page grid">
+  {{#each semester in model}}
+      <div class="fourteen wide column centered">
+          <div class="ui form">
+              <div class="field">
+                  <h3 class="ui header">{{input value=semester.name}}</h3>
+              </div>
+
+              <div class="">
+                  <table class="ui striped table">
+                      <thead>
+                      <tr>
+                          <th class="collapsing">No</th>
+                          <th class="ten wide">Mata kuliah</th>
+                          <th class="two wide">SKS</th>
+                          <th class="two wide">Huruf</th>
+                          <th>Plan</th>
+                          <th>KTN</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      {{#each course in semester.courses}}
+                          <tr class="ui form">
+                              <td>{{course.id}}</td>
+                              <td class="field">{{input value=course.name}}</td>
+                              <td class="field" >{{view view.course course-id=course.id value=course.ppc selection=course.ppc }}</td>
+                              <td class="field">{{view view.grade content=grade course-id=course.id optionValuePath="content.id" optionLabelPath="content.letter" value=course.grade.id  }}</td>
+                              <td>-</td>
+                              <td class="field">{{calculate-qp course}}</td>
+                          </tr>
+                      {{/each}}
+                      </tbody>
+                      <tfoot>
+                      <tr>
+                          <td colspan="3">
+                              <div class="ui button" {{action "addCourse" semester}} >
+                                  <i class="plus icon"></i>
+                                  Mata Kuliah
+                              </div>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td colspan="3"><h4 class="label-ips">Indeks Prestasi <span></span></h4></td>
+                          <td colspan="3"></td>
+                      </tr>
+                      </tfoot>
+                  </table>
+              </div>
+          </div>
+      </div>
+  {{/each}}
+    <div class="ui button" {{action "addSemester"}} >
+        <i class="plus icon"></i>
+        Semester
+    </div>
+</div>

@@ -7,6 +7,7 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('colleges');
+  this.route('calculators', { path: 'calc' });
 });
 
 export default Router;

@@ -1,0 +1,12 @@
+<div class="ui page grid">
+    <div class="ten wide column centered">
+        <h1 class="center aligned column">Kalkulator IPK</h1>
+        <div class="ui form">
+            <div class="field">
+              {{view "select" placeholder="Ketik nama kampus" class="ui search dropdown" content=colleges optionValuePath="content.id" optionLabelPath="content.descName" id="selectCollege"}}
+            </div>
+        </div>
+    </div>
+</div>
+
+{{view view.modal}}

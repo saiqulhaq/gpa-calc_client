@@ -17,4 +17,36 @@ var app = new EmberApp();
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
 
+
+app.import('bower_components/semantic-ui/dist/semantic.min.css');
+app.import('bower_components/semantic-ui/dist/semantic.min.js');
+
+app.import('bower_components/semantic-ui/dist/themes/default/assets/fonts/icons.eot', {
+  destDir: "assets/themes/default/assets/fonts"
+});
+
+app.import('bower_components/semantic-ui/dist/themes/default/assets/fonts/icons.otf', {
+  destDir: "assets/themes/default/assets/fonts"
+});
+
+app.import('bower_components/semantic-ui/dist/themes/default/assets/fonts/icons.svg', {
+  destDir: "assets/themes/default/assets/fonts"
+});
+
+app.import('bower_components/semantic-ui/dist/themes/default/assets/fonts/icons.ttf', {
+  destDir: "assets/themes/default/assets/fonts"
+});
+
+app.import('bower_components/semantic-ui/dist/themes/default/assets/fonts/icons.woff', {
+  destDir: "assets/themes/default/assets/fonts"
+});
+
+app.import('bower_components/semantic-ui/dist/themes/default/assets/fonts/icons.woff2', {
+  destDir: "assets/themes/default/assets/fonts"
+});
+
+app.import('bower_components/semantic-ui/dist/themes/default/assets/images/flags.png', {
+  destDir: "assets/themes/default/assets/images"
+});
 module.exports = app.toTree();
+

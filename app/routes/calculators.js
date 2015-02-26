@@ -13,9 +13,9 @@ export default Ember.Route.extend({
     }
     return this.store.find("semester");
   },
-  beforeModel: function(params){
+  beforeModel: function(){
     "use strict";
-    var self = this, grade;
+    var self = this;
     this.store.find('grade').then(function(grade){
       if(grade.toArray().length === 0){
         grade = [

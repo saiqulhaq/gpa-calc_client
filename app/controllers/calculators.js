@@ -9,7 +9,7 @@ export default Ember.Controller.extend({
   actions: {
     addSemester: function(){
       "use strict";
-      var currentTotalSemester = this.get("totalSemester"), semester;
+      var currentTotalSemester = this.get("totalSemester");
       this.store.push("semester",
         this.store.normalize("semester", {
           id: currentTotalSemester + 1,
